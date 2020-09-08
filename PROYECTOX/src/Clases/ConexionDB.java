@@ -14,7 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * MODIFICACION HECHA EN EL NAVEGADOR PARA COMPROVAR CAMBIOS EN NETBEANS
  * @author EQUINOX
  */
 public class ConexionDB {
