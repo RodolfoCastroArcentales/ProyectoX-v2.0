@@ -1,11 +1,15 @@
 package Ventanas;
 import java.awt.event.*;
 import java.util.Arrays;
+import javax.swing.JFrame;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 public class AccesoalSistema extends javax.swing.JFrame implements ActionListener{
     public AccesoalSistema() {
-        initComponents();
+        initComponents();       
         this.setSize(329,440);
         JBtnA.addActionListener(this);
+        setLocationRelativeTo(null);        
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -35,7 +39,7 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
         JTxtuser.setToolTipText("Ingrese su numero de cedula");
         JTxtuser.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         getContentPane().add(JTxtuser);
-        JTxtuser.setBounds(160, 100, 130, 21);
+        JTxtuser.setBounds(160, 100, 130, 23);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         jLabel3.setText("Contraseña:");
@@ -45,7 +49,10 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
         JBtnA.setFont(new java.awt.Font("Californian FB", 1, 18)); // NOI18N
         JBtnA.setText("Acceder");
         getContentPane().add(JBtnA);
-        JBtnA.setBounds(100, 250, 110, 37);
+        JBtnA.setBounds(100, 251, 120, 40);
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\Fondo_Seguridad3.jpg")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 320, 400);
 
@@ -76,9 +83,20 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
         //</editor-fold>
         //</editor-fold>
 
+        try {
+            UIManager.setLookAndFeel("com.jtattoo.plaf.hifi.HiFiLookAndFeel");
+        } catch (ClassNotFoundException ex) {
+            //Logger.getLogger(VentanaInterfacePersona.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            //Logger.getLogger(VentanaInterfacePersona.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            //Logger.getLogger(VentanaInterfacePersona.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (UnsupportedLookAndFeelException ex) {
+            //Logger.getLogger(VentanaInterfacePersona.class.getName()).log(Level.SEVERE, null, ex);
+        }
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+            public void run() {               
                 new AccesoalSistema().setVisible(true);
             }
         });

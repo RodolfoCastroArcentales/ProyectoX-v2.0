@@ -1,13 +1,17 @@
 package Ventanas;
 import java.awt.event.*;
+import javax.swing.JFrame;
+import javax.swing.UIManager;
 public class Login extends javax.swing.JFrame implements  MouseListener{
 
     public Login() {
         initComponents();
-        setSize(420,600);
-        setLocationRelativeTo(this);
+        setSize(440,590);
+        setLocationRelativeTo(null);
         JBtnIngreso.addMouseListener(this);
         JBtnRegistro.addMouseListener(this);
+       
+        
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -19,28 +23,31 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
         jLabel5 = new javax.swing.JLabel();
         JBtnRegistro = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 153, 255));
         getContentPane().setLayout(null);
 
-        JBtnIngreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopis/user.jpg"))); // NOI18N
+        JBtnIngreso.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\AccSis2.jpg")); // NOI18N
         JBtnIngreso.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBtnIngreso.setBorderPainted(false);
+        JBtnIngreso.setPressedIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\AccSis.jpg")); // NOI18N
+        JBtnIngreso.setRolloverIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\AccSis2.jpg")); // NOI18N
         getContentPane().add(JBtnIngreso);
-        JBtnIngreso.setBounds(90, 340, 60, 60);
+        JBtnIngreso.setBounds(90, 340, 60, 70);
 
         jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 1, 27)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("BIENVENIDO(A)");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(60, 60, 280, 40);
+        jLabel2.setBounds(80, 60, 280, 40);
 
         jLabel4.setFont(new java.awt.Font("Lucida Calligraphy", 1, 27)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("SISBAN");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(130, 160, 140, 60);
+        jLabel4.setBounds(150, 160, 140, 60);
 
         jLabel5.setFont(new java.awt.Font("Californian FB", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -48,8 +55,10 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
         getContentPane().add(jLabel5);
         jLabel5.setBounds(180, 470, 140, 30);
 
-        JBtnRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopis/Registro.jpg"))); // NOI18N
+        JBtnRegistro.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\SignUp2.jpg")); // NOI18N
         JBtnRegistro.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBtnRegistro.setPressedIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\SignUp.jpg")); // NOI18N
+        JBtnRegistro.setRolloverIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\SignUp2.jpg")); // NOI18N
         getContentPane().add(JBtnRegistro);
         JBtnRegistro.setBounds(90, 450, 60, 70);
 
@@ -59,11 +68,13 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
         getContentPane().add(jLabel6);
         jLabel6.setBounds(180, 360, 140, 30);
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopis/f7.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(-40, 0, 450, 570);
+        Fondo.setBackground(new java.awt.Color(255, 255, 255));
+        Fondo.setForeground(new java.awt.Color(255, 255, 255));
+        Fondo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\Fondo.jpg")); // NOI18N
+        Fondo.setToolTipText("");
+        getContentPane().add(Fondo);
+        Fondo.setBounds(-40, 0, 480, 550);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -74,20 +85,21 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            UIManager.setLookAndFeel("com.jtattoo.plaf.hifi.HiFiLookAndFeel");
+            /*for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
-            }
+            }*/
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            //java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            //java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            //java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            //java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -101,9 +113,9 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fondo;
     private javax.swing.JButton JBtnIngreso;
     private javax.swing.JButton JBtnRegistro;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -156,3 +168,10 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
         
     }
 }
+
+
+/*       JFrame.setDefaultLookAndFeelDecorated(true);
+        try {
+            UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
+        } catch (Exception e) {
+        }*/
