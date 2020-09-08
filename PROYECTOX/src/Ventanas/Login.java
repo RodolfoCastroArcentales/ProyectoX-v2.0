@@ -1,4 +1,4 @@
-package proyectox;
+package Ventanas;
 import java.awt.event.*;
 public class Login extends javax.swing.JFrame implements  MouseListener{
 

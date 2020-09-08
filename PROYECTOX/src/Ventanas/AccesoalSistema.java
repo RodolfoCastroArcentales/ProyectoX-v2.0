@@ -1,4 +1,4 @@
-package proyectox;
+package Ventanas;
 import java.awt.event.*;
 import java.util.Arrays;
 public class AccesoalSistema extends javax.swing.JFrame implements ActionListener{
@@ -35,7 +35,7 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
         JTxtuser.setToolTipText("Ingrese su numero de cedula");
         JTxtuser.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         getContentPane().add(JTxtuser);
-        JTxtuser.setBounds(160, 100, 130, 23);
+        JTxtuser.setBounds(160, 100, 130, 21);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         jLabel3.setText("Contraseña:");
@@ -45,7 +45,7 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
         JBtnA.setFont(new java.awt.Font("Californian FB", 1, 18)); // NOI18N
         JBtnA.setText("Acceder");
         getContentPane().add(JBtnA);
-        JBtnA.setBounds(100, 250, 110, 29);
+        JBtnA.setBounds(100, 250, 110, 37);
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 320, 400);
 
