@@ -25,7 +25,6 @@ public class Registro extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         JApe = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        JCed = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         JTel = new javax.swing.JTextField();
         BtnReg = new javax.swing.JButton();
@@ -33,6 +32,7 @@ public class Registro extends javax.swing.JFrame {
         JDir = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         JCiud = new javax.swing.JTextField();
+        JCed = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,6 +55,8 @@ public class Registro extends javax.swing.JFrame {
 
         jLabel1.setText("Ciudad:");
 
+        JCed.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -76,18 +78,18 @@ public class Registro extends javax.swing.JFrame {
                             .addComponent(JNom)
                             .addComponent(JDir, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
                             .addComponent(JTel)
-                            .addComponent(JCed)
-                            .addComponent(JCiud)))
+                            .addComponent(JCiud)
+                            .addComponent(JCed)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
+                        .addGap(154, 154, 154)
                         .addComponent(BtnReg)))
                 .addContainerGap(157, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4)
                     .addComponent(JCed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -110,9 +112,9 @@ public class Registro extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(JCiud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(BtnReg)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -120,13 +122,12 @@ public class Registro extends javax.swing.JFrame {
 
     private void BtnRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegActionPerformed
         String r = "";
-        if (!(r.equals(JCed.getText()) && r.equals(JNom.getText()) && r.equals(JApe.getText()) && r.equals(JDir.getText()) && r.equals(JDir.getText()) && r.equals(JCiud.getText()))) {
-            JOptionPane.showMessageDialog(this, "Debe ingresar todos los datos", "Sistema", JOptionPane.ERROR_MESSAGE);
+        if ((r.equals(JCed.getText()) || r.equals(JNom.getText()) || r.equals(JApe.getText()) || r.equals(JDir.getText()) || r.equals(JDir.getText()) || r.equals(JCiud.getText()))) {
+            JOptionPane.showMessageDialog(this, "Debe ingresar todos los datos", "Sistema", JOptionPane.ERROR_MESSAGE);          
+        } else {
             Registrar();
             Nivel0 obj = new Nivel0();
             obj.setVisible(true);
-        } else {
-            JOptionPane.showMessageDialog(this, "Sistema", "Todo bien", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_BtnRegActionPerformed
     private Connection conexion() {
@@ -206,7 +207,7 @@ public class Registro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnReg;
     private javax.swing.JTextField JApe;
-    private javax.swing.JTextField JCed;
+    private javax.swing.JFormattedTextField JCed;
     private javax.swing.JTextField JCiud;
     private javax.swing.JTextField JDir;
     private javax.swing.JTextField JNom;

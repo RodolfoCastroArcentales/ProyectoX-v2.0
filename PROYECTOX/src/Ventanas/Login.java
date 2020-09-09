@@ -1,7 +1,7 @@
 package Ventanas;
 import java.awt.event.*;
-import javax.swing.JFrame;
-import javax.swing.UIManager;
+import javax.swing.*;
+import Registro.*;
 public class Login extends javax.swing.JFrame implements  MouseListener{
 
     public Login() {
@@ -9,9 +9,7 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
         setSize(440,590);
         setLocationRelativeTo(null);
         JBtnIngreso.addMouseListener(this);
-        JBtnRegistro.addMouseListener(this);
-       
-        
+        JBtnRegistro.addMouseListener(this);     
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -129,13 +127,15 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
             JBtnIngreso.setSize(60, 70);
         }
         if(e.getSource()==JBtnIngreso){
-            
+            AccesoalSistema obj = new AccesoalSistema();
+            obj.setVisible(true);
+            dispose();
         }else{
             if(e.getSource()==JBtnRegistro){
-                /*Registro ob = new Registro(this,true);
+                Registro ob = new Registro();
                 ob.pack();
                 ob.setVisible(true);
-                dispose();*/
+                dispose();
             }
         }
     }

@@ -17,9 +17,9 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
 
         jLabel2 = new javax.swing.JLabel();
         JPass = new javax.swing.JPasswordField();
-        JTxtuser = new javax.swing.JFormattedTextField();
         jLabel3 = new javax.swing.JLabel();
         JBtnA = new javax.swing.JButton();
+        JTxtuser = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -33,13 +33,7 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
         JPass.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         JPass.setToolTipText("Digite su contraseña porfavor");
         getContentPane().add(JPass);
-        JPass.setBounds(160, 160, 130, 23);
-
-        JTxtuser.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat(""))));
-        JTxtuser.setToolTipText("Ingrese su numero de cedula");
-        JTxtuser.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        getContentPane().add(JTxtuser);
-        JTxtuser.setBounds(160, 100, 130, 23);
+        JPass.setBounds(160, 90, 130, 30);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         jLabel3.setText("Contraseña:");
@@ -50,9 +44,10 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
         JBtnA.setText("Acceder");
         getContentPane().add(JBtnA);
         JBtnA.setBounds(100, 251, 120, 40);
+        getContentPane().add(JTxtuser);
+        JTxtuser.setBounds(160, 150, 130, 30);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\Fondo_Seguridad3.jpg")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 320, 400);
 
@@ -105,7 +100,7 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBtnA;
     private javax.swing.JPasswordField JPass;
-    private javax.swing.JFormattedTextField JTxtuser;
+    private javax.swing.JTextField JTxtuser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
