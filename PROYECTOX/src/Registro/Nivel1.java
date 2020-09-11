@@ -1,5 +1,11 @@
 package Registro;
+import Clases.*;
+import java.sql.*;
+import javax.swing.*;
+import javax.swing.JOptionPane;
+
 public class Nivel1 extends javax.swing.JFrame {
+    ConexionDB CDB = new ConexionDB();
     public Nivel1() {
         initComponents();
     }
@@ -35,6 +41,11 @@ public class Nivel1 extends javax.swing.JFrame {
         jLabel6.setText("Numero Telefono:");
 
         jButton1.setText("Grabar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -48,12 +59,12 @@ public class Nivel1 extends javax.swing.JFrame {
                             .addComponent(jLabel3)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(JDirT, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
-                                    .addComponent(JSuel)))))
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(27, 27, 27)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(JDirT, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(JSuel, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(77, 77, 77)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,10 +114,26 @@ public class Nivel1 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    /**
-     * @param args the command line arguments
-     */
+    public void Grabar() {
+        Connection cn;
+        String sQuery;
+        cn = CDB.conexion();
+        if (cn != null) {
+            sQuery = "Insert into DATOS values ('"+this.JDirT.getText() + "'," + this.JSuel.getText() + ",'" + this.JNom.getText() + "'," + this.JCed.getText() +  "," + this.JNumT.getText()+")";
+            CDB.ejecutar(cn, sQuery);
+        }
+    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String r = "";
+        if ((r.equals(JDirT.getText()) || r.equals(JSuel.getText()) || r.equals(JNom.getText()) || r.equals(JCed.getText()) || r.equals(JNumT.getText()))) {
+            JOptionPane.showMessageDialog(this, "Debe ingresar todos los datos", "Mensaje de Sistema", JOptionPane.ERROR_MESSAGE);          
+        } else {
+            Grabar();
+            /*Nivel0 obj = new Nivel0();
+            obj.setVisible(true);
+            dispose();*/
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

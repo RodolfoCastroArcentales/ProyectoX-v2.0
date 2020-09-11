@@ -1,17 +1,10 @@
 package Registro;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.UIManager;
+import Clases.*;
+import java.sql.*;
+import javax.swing.*;
 
 public class Registro extends javax.swing.JFrame {
-
+    ConexionDB CDB = new ConexionDB();
     public Registro() {
         initComponents();
     }
@@ -123,7 +116,7 @@ public class Registro extends javax.swing.JFrame {
     private void BtnRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegActionPerformed
         String r = "";
         if ((r.equals(JCed.getText()) || r.equals(JNom.getText()) || r.equals(JApe.getText()) || r.equals(JDir.getText()) || r.equals(JDir.getText()) || r.equals(JCiud.getText()))) {
-            JOptionPane.showMessageDialog(this, "Debe ingresar todos los datos", "Sistema", JOptionPane.ERROR_MESSAGE);          
+            JOptionPane.showMessageDialog(this, "Debe ingresar todos los datos", "Mensaje de Sistema", JOptionPane.ERROR_MESSAGE);          
         } else {
             Registrar();
             Nivel0 obj = new Nivel0();
@@ -131,47 +124,16 @@ public class Registro extends javax.swing.JFrame {
             dispose();
         }
     }//GEN-LAST:event_BtnRegActionPerformed
-    private Connection conexion() {
-        Connection cn = null;
-        String query = "";
-        try {
-            String url = "jdbc:oracle:thin:@DESKTOP-M2DQEAJ:1521:XE";
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            cn = DriverManager.getConnection(url, "hr", "hr");
-        } catch (ClassNotFoundException ex) {
-
-        } catch (SQLException ex) {
-            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return cn;
-    }
-
-    public int ejecutar(Connection cn, String sQuery) {
-        Statement st;
-        int fila = 0;
-        try {
-            st = cn.createStatement();
-            fila = st.executeUpdate(sQuery);
-            st.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return fila;
-    }
-
+   
     public void Registrar() {
         Connection cn;
         String sQuery;
-        cn = conexion();
+        cn = CDB.conexion();
         if (cn != null) {
-            sQuery = "Insert into CLIENTES values (" + this.JCed.getText() + ",'" + this.JNom.getText() + "','" + "','" + this.JApe.getText() + this.JDir.getText() + "','" + this.JTel.getText() + "','" + this.JCiud.getText() + "')";
-            this.ejecutar(cn, sQuery);
+            sQuery = "Insert into CLIENTES values (" + this.JCed.getText() + ",'" + this.JNom.getText() + "','"  + this.JDir.getText() + "','" + this.JTel.getText() +  "','" + this.JApe.getText()+ "','" + this.JCiud.getText() +"')";
+            CDB.ejecutar(cn, sQuery);
         }
     }
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
 
         /* Set the Nimbus look and feel */
