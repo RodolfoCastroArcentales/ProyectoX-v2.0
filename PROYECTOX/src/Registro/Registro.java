@@ -128,6 +128,7 @@ public class Registro extends javax.swing.JFrame {
             Registrar();
             Nivel0 obj = new Nivel0();
             obj.setVisible(true);
+            dispose();
         }
     }//GEN-LAST:event_BtnRegActionPerformed
     private Connection conexion() {
