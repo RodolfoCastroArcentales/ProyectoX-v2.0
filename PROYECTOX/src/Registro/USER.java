@@ -1,5 +1,5 @@
 package Registro;
-
+import Registro.*;
 import Clases.ConexionDB;
 import java.sql.Connection;
 import java.util.Arrays;
@@ -31,6 +31,12 @@ public class USER extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setText("CREAR CUENTA");
+
+        JUser.setToolTipText("");
+        JUser.setEnabled(false);
+
+        Jpass.setColumns(12);
+        Jpass.setToolTipText("Contraseña maximo 12caracteres");
 
         JCrear.setText("Crear Cuenta");
         JCrear.addActionListener(new java.awt.event.ActionListener() {
@@ -88,19 +94,23 @@ public class USER extends javax.swing.JFrame {
         String pass = Arrays.toString(Jpass.getPassword());
         cn = CDB.conexion();
         if (cn != null) {
-            sQuery = "Insert into USUARIOS values ("+this.JUser.getText()+",'" +pass+"')";
-            CDB.ejecutar(cn, sQuery);
+            try{
+                sQuery = "Insert into USUARIOS values ("+this.JUser.getText()+",'" +pass+"')";
+                CDB.ejecutar(cn, sQuery);
+            }catch(Exception e){
+                
+            }
         }
     }
     private void JCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCrearActionPerformed
-       String r = "";
+        String r = "";
         if ((r.equals(JUser.getText()) || r.equals(Jpass.getPassword()))) {
             JOptionPane.showMessageDialog(this, "Debe ingresar todos los datos", "Mensaje de Sistema", JOptionPane.ERROR_MESSAGE);          
         } else {
             Crear();
-            /*Nivel0 obj = new Nivel0();
+            Nivel0 obj = new Nivel0();
             obj.setVisible(true);
-            dispose();*/
+            dispose();
         }
     }//GEN-LAST:event_JCrearActionPerformed
     public static void main(String args[]) {
@@ -137,7 +147,7 @@ public class USER extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JCrear;
-    private javax.swing.JTextField JUser;
+    protected static javax.swing.JTextField JUser;
     private javax.swing.JPasswordField Jpass;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

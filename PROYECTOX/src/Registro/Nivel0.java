@@ -7,8 +7,8 @@ public class Nivel0 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        JCC = new javax.swing.JButton();
+        JCA = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         JL1 = new javax.swing.JLabel();
@@ -17,17 +17,17 @@ public class Nivel0 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Cuenta Corriente");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        JCC.setText("Cuenta Corriente");
+        JCC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                JCCActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Cuenta de Ahorro");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        JCA.setText("Cuenta de Ahorro");
+        JCA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                JCAActionPerformed(evt);
             }
         });
 
@@ -49,8 +49,8 @@ public class Nivel0 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(JCC)
+                    .addComponent(JCA))
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(JL2, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
@@ -73,9 +73,9 @@ public class Nivel0 extends javax.swing.JFrame {
                         .addComponent(JL2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(98, 98, 98)
-                        .addComponent(jButton1)
+                        .addComponent(JCC)
                         .addGap(51, 51, 51)
-                        .addComponent(jButton2)))
+                        .addComponent(JCA)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -85,18 +85,26 @@ public class Nivel0 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    protected static String tip;
+    private void JCCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCCActionPerformed
         Nivel1 obj = new Nivel1();
         obj.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+        Nivel2 n = new Nivel2();
+        n.setVisible(true);
+        dispose();
+        tip=JCC.getText();
+    }//GEN-LAST:event_JCCActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void JCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCAActionPerformed
         Nivel1 obj = new Nivel1();
         obj.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+        tip=JCA.getText();
+        Nivel2 n = new Nivel2();
+        n.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_JCAActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,10 +142,10 @@ public class Nivel0 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JCA;
+    private javax.swing.JButton JCC;
     private javax.swing.JLabel JL1;
     private javax.swing.JLabel JL2;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

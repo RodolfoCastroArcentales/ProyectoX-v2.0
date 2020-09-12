@@ -8,7 +8,7 @@ public class Registro extends javax.swing.JFrame {
     public Registro() {
         initComponents();
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -112,14 +112,15 @@ public class Registro extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+   
     private void BtnRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegActionPerformed
         String r = "";
         if ((r.equals(JCed.getText()) || r.equals(JNom.getText()) || r.equals(JApe.getText()) || r.equals(JDir.getText()) || r.equals(JDir.getText()) || r.equals(JCiud.getText()))) {
             JOptionPane.showMessageDialog(this, "Debe ingresar todos los datos", "Mensaje de Sistema", JOptionPane.ERROR_MESSAGE);          
         } else {
-            Registrar();
-            Nivel0 obj = new Nivel0();
+            Registrar();      
+            USER obj = new USER();
+            USER.JUser.setText(Registro.JCed.getText());
             obj.setVisible(true);
             dispose();
         }
@@ -170,10 +171,10 @@ public class Registro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnReg;
     private javax.swing.JTextField JApe;
-    private javax.swing.JFormattedTextField JCed;
+    protected static javax.swing.JFormattedTextField JCed;
     private javax.swing.JTextField JCiud;
     private javax.swing.JTextField JDir;
-    private javax.swing.JTextField JNom;
+    protected static javax.swing.JTextField JNom;
     private javax.swing.JTextField JTel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

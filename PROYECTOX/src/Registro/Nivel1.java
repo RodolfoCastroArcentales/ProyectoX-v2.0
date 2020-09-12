@@ -2,7 +2,6 @@ package Registro;
 import Clases.*;
 import java.sql.*;
 import javax.swing.*;
-import javax.swing.JOptionPane;
 
 public class Nivel1 extends javax.swing.JFrame {
     ConexionDB CDB = new ConexionDB();
@@ -122,16 +121,18 @@ public class Nivel1 extends javax.swing.JFrame {
             sQuery = "Insert into DATOS values ('"+this.JDirT.getText() + "'," + this.JSuel.getText() + ",'" + this.JNom.getText() + "'," + this.JCed.getText() +  "," + this.JNumT.getText()+")";
             CDB.ejecutar(cn, sQuery);
         }
+        
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String r = "";
         if ((r.equals(JDirT.getText()) || r.equals(JSuel.getText()) || r.equals(JNom.getText()) || r.equals(JCed.getText()) || r.equals(JNumT.getText()))) {
             JOptionPane.showMessageDialog(this, "Debe ingresar todos los datos", "Mensaje de Sistema", JOptionPane.ERROR_MESSAGE);          
-        } else {
+        }
+        else {
             Grabar();
-            /*Nivel0 obj = new Nivel0();
+            /*Nivel2 obj = new Nivel2();
             obj.setVisible(true);
-            dispose();*/
+            dispose();   */  
         }
     }//GEN-LAST:event_jButton1ActionPerformed
     public static void main(String args[]) {
