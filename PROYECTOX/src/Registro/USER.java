@@ -1,9 +1,8 @@
 package Registro;
-import Registro.*;
 import Clases.ConexionDB;
 import java.sql.Connection;
 import java.util.Arrays;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public class USER extends javax.swing.JFrame {
     ConexionDB CDB = new ConexionDB();
@@ -95,7 +94,7 @@ public class USER extends javax.swing.JFrame {
         cn = CDB.conexion();
         if (cn != null) {
             try{
-                sQuery = "Insert into USUARIOS values ("+this.JUser.getText()+",'" +pass+"')";
+                sQuery = "Insert into USUARIOS values ("+JUser.getText()+",'" +pass+"')";
                 CDB.ejecutar(cn, sQuery);
             }catch(Exception e){
                 
