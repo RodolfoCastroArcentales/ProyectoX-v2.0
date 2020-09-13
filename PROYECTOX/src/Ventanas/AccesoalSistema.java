@@ -63,12 +63,12 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
         jLabel3.setBounds(20, 170, 120, 20);
 
         JBtnA.setFont(new java.awt.Font("Californian FB", 1, 18)); // NOI18N
-        JBtnA.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\Proyecto ETERNO de PIS\\Proyectox\\PROYECTOX\\src\\Imagenes\\Boton-Acceder1.png")); // NOI18N
+        JBtnA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton-Acceder1.png"))); // NOI18N
         JBtnA.setBorderPainted(false);
         JBtnA.setContentAreaFilled(false);
         JBtnA.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        JBtnA.setPressedIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\Proyecto ETERNO de PIS\\Proyectox\\PROYECTOX\\src\\Imagenes\\Boton-Acceder2.png")); // NOI18N
-        JBtnA.setRolloverIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\Proyecto ETERNO de PIS\\Proyectox\\PROYECTOX\\src\\Imagenes\\Boton-Acceder1.png")); // NOI18N
+        JBtnA.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton-Acceder2.png"))); // NOI18N
+        JBtnA.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton-Acceder1.png"))); // NOI18N
         JBtnA.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 JBtnAMouseEntered(evt);
@@ -82,7 +82,7 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
         getContentPane().add(JBtnA);
         JBtnA.setBounds(90, 260, 140, 50);
 
-        VerPass.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\Proyecto ETERNO de PIS\\Proyectox\\PROYECTOX\\src\\Imagenes\\VerPass3.png")); // NOI18N
+        VerPass.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/VerPass3.png"))); // NOI18N
         VerPass.setAutoscrolls(true);
         VerPass.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         VerPass.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -97,7 +97,7 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
         JTxtuser.setBounds(130, 100, 130, 30);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\Proyecto ETERNO de PIS\\Proyectox\\PROYECTOX\\src\\Imagenes\\Fondo_Seguridad2.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo_Seguridad2.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 320, 400);
 

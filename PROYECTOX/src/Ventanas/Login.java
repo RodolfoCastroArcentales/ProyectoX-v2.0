@@ -72,15 +72,15 @@ public class Login extends javax.swing.JFrame implements MouseListener {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(180, 470, 140, 30);
 
-        JBtnRegistro.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\Proyecto ETERNO de PIS\\Proyectox\\PROYECTOX\\src\\Imagenes\\signup-icon1.png")); // NOI18N
+        JBtnRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/signup-icon1.png"))); // NOI18N
         JBtnRegistro.setBorder(null);
         JBtnRegistro.setBorderPainted(false);
         JBtnRegistro.setContentAreaFilled(false);
         JBtnRegistro.setFocusable(false);
         JBtnRegistro.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         JBtnRegistro.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        JBtnRegistro.setPressedIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\Proyecto ETERNO de PIS\\Proyectox\\PROYECTOX\\src\\Imagenes\\signup-icon2.png")); // NOI18N
-        JBtnRegistro.setRolloverIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\Proyecto ETERNO de PIS\\Proyectox\\PROYECTOX\\src\\Imagenes\\signup-icon1.png")); // NOI18N
+        JBtnRegistro.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/signup-icon2.png"))); // NOI18N
+        JBtnRegistro.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/signup-icon1.png"))); // NOI18N
         JBtnRegistro.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         getContentPane().add(JBtnRegistro);
         JBtnRegistro.setBounds(100, 451, 50, 60);

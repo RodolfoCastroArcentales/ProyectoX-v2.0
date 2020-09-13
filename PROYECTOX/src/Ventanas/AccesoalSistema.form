@@ -91,16 +91,16 @@
           <Font name="Californian FB" size="18" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Rodolfoblue\Documents\Proyecto ETERNO de PIS\Proyectox\PROYECTOX\src\Imagenes\Boton-Acceder1.png"/>
+          <Image iconType="3" name="/imagenes/Boton-Acceder1.png"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
         <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Rodolfoblue\Documents\Proyecto ETERNO de PIS\Proyectox\PROYECTOX\src\Imagenes\Boton-Acceder2.png"/>
+          <Image iconType="3" name="/imagenes/Boton-Acceder2.png"/>
         </Property>
         <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Rodolfoblue\Documents\Proyecto ETERNO de PIS\Proyectox\PROYECTOX\src\Imagenes\Boton-Acceder1.png"/>
+          <Image iconType="3" name="/imagenes/Boton-Acceder1.png"/>
         </Property>
       </Properties>
       <Events>
@@ -116,7 +116,7 @@
     <Component class="javax.swing.JButton" name="VerPass">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Rodolfoblue\Documents\Proyecto ETERNO de PIS\Proyectox\PROYECTOX\src\Imagenes\VerPass3.png"/>
+          <Image iconType="3" name="/imagenes/VerPass3.png"/>
         </Property>
         <Property name="autoscrolls" type="boolean" value="true"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -146,7 +146,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="11"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Rodolfoblue\Documents\Proyecto ETERNO de PIS\Proyectox\PROYECTOX\src\Imagenes\Fondo_Seguridad2.jpg"/>
+          <Image iconType="3" name="/imagenes/Fondo_Seguridad2.jpg"/>
         </Property>
       </Properties>
       <Constraints>
