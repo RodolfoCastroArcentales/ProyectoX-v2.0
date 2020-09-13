@@ -1,16 +1,24 @@
 package Ventanas;
+
 import java.awt.event.*;
+import java.awt.Image;
 import javax.swing.*;
 import Registro.*;
-public class Login extends javax.swing.JFrame implements  MouseListener{
+import java.awt.Graphics;
+
+public class Login extends javax.swing.JFrame implements MouseListener {
+
+ 
 
     public Login() {
         initComponents();
-        setSize(440,590);
+        setSize(440, 590);
         setLocationRelativeTo(null);
         JBtnIngreso.addMouseListener(this);
-        JBtnRegistro.addMouseListener(this);     
+        JBtnRegistro.addMouseListener(this);
+
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -27,7 +35,7 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
         setBackground(new java.awt.Color(0, 153, 255));
         getContentPane().setLayout(null);
 
-        JBtnIngreso.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\Proyecto ETERNO de PIS\\Proyectox\\PROYECTOX\\src\\Imagenes\\AccSis1.png")); // NOI18N
+        JBtnIngreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AccSis1.png"))); // NOI18N
         JBtnIngreso.setBorder(null);
         JBtnIngreso.setBorderPainted(false);
         JBtnIngreso.setContentAreaFilled(false);
@@ -35,8 +43,8 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
         JBtnIngreso.setFocusable(false);
         JBtnIngreso.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         JBtnIngreso.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        JBtnIngreso.setPressedIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\Proyecto ETERNO de PIS\\Proyectox\\PROYECTOX\\src\\Imagenes\\AccSis2.png")); // NOI18N
-        JBtnIngreso.setRolloverIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\Proyecto ETERNO de PIS\\Proyectox\\PROYECTOX\\src\\Imagenes\\AccSis1.png")); // NOI18N
+        JBtnIngreso.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AccSis2.png"))); // NOI18N
+        JBtnIngreso.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AccSis1.png"))); // NOI18N
         JBtnIngreso.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         JBtnIngreso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,9 +94,14 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
         Fondo.setBackground(new java.awt.Color(255, 255, 255));
         Fondo.setForeground(new java.awt.Color(255, 255, 255));
         Fondo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\Proyecto ETERNO de PIS\\Proyectox\\PROYECTOX\\src\\Imagenes\\Fondo.jpg")); // NOI18N
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo.jpg"))); // NOI18N
         Fondo.setToolTipText("");
         Fondo.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        Fondo.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                FondoComponentAdded(evt);
+            }
+        });
         getContentPane().add(Fondo);
         Fondo.setBounds(-40, 0, 480, 550);
 
@@ -98,6 +111,11 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
     private void JBtnIngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBtnIngresoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JBtnIngresoActionPerformed
+
+    private void FondoComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_FondoComponentAdded
+
+    }//GEN-LAST:event_FondoComponentAdded
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -142,18 +160,20 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
     private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 
+   
+
     @Override
     public void mouseClicked(MouseEvent e) {
-        if(this==e.getSource()){
+        if (this == e.getSource()) {
             JBtnRegistro.setSize(60, 70);
             JBtnIngreso.setSize(60, 70);
         }
-        if(e.getSource()==JBtnIngreso){
+        if (e.getSource() == JBtnIngreso) {
             AccesoalSistema obj = new AccesoalSistema();
             obj.setVisible(true);
             dispose();
-        }else{
-            if(e.getSource()==JBtnRegistro){
+        } else {
+            if (e.getSource() == JBtnRegistro) {
                 Registro ob = new Registro();
                 ob.pack();
                 ob.setVisible(true);
@@ -164,22 +184,22 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
 
     @Override
     public void mousePressed(MouseEvent e) {
-        
+
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        
+
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        if(JBtnIngreso ==e.getSource()){
-            JBtnIngreso.setSize(80,80);
+        if (JBtnIngreso == e.getSource()) {
+            JBtnIngreso.setSize(80, 80);
             JBtnRegistro.setSize(60, 70);
-        }else{
-            if(JBtnRegistro ==e.getSource()){
-                JBtnRegistro.setSize(80,80);
+        } else {
+            if (JBtnRegistro == e.getSource()) {
+                JBtnRegistro.setSize(80, 80);
                 JBtnIngreso.setSize(60, 70);
             }
         }
@@ -187,13 +207,6 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
 
     @Override
     public void mouseExited(MouseEvent e) {
-        
+
     }
 }
-
-
-/*       JFrame.setDefaultLookAndFeelDecorated(true);
-        try {
-            UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
-        } catch (Exception e) {
-        }*/

@@ -25,11 +25,11 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
+        JPassVisible = new javax.swing.JTextField();
         JPassOculto = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
         JBtnA = new javax.swing.JButton();
         VerPass = new javax.swing.JButton();
-        JPassVisible = new javax.swing.JTextField();
         JTxtuser = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
@@ -41,6 +41,15 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
         jLabel2.setText("Usuario:");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(20, 110, 90, 20);
+
+        JPassVisible.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        JPassVisible.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JPassVisibleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(JPassVisible);
+        JPassVisible.setBounds(130, 160, 130, 30);
 
         JPassOculto.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         JPassOculto.setToolTipText("Digite su contraseña porfavor");
@@ -84,15 +93,6 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
         });
         getContentPane().add(VerPass);
         VerPass.setBounds(270, 160, 30, 20);
-
-        JPassVisible.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        JPassVisible.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JPassVisibleActionPerformed(evt);
-            }
-        });
-        getContentPane().add(JPassVisible);
-        JPassVisible.setBounds(130, 160, 130, 30);
         getContentPane().add(JTxtuser);
         JTxtuser.setBounds(130, 100, 130, 30);
 
